@@ -14,7 +14,11 @@ export const NavigationSidebar = async () => {
     if (!profile) return redirect("/")
     const servers = await db.server.findMany({
         where: {
-            profileId: profile.id
+            members: {
+                some: {
+                    profileId: profile.id
+                }
+            }
         }
     })
 
