@@ -63,6 +63,7 @@ export const MembersModal = () => {
                 },
             });
 
+            console.log("url", url)
             const response = await axios.delete(url);
 
             router.refresh();
