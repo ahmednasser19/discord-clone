@@ -96,7 +96,6 @@ export const MembersModal = () => {
         }
     }
 
-    console.log("server?.members", server?.members)
 
     return (
         <Dialog open={isModalOpen} onOpenChange={onClose}>
